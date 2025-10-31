@@ -57,6 +57,78 @@ body{
 .btn-cta:hover{transform:translateY(-4px);filter:brightness(1.05)}
 .btn-ghost{background:transparent;color:var(--cyan);border:1px solid rgba(0,229,255,0.08)}
 
+/* 💻 Tech Stack Section */
+.tech-stack {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tech-stack h2 {
+  font-size: 1.8rem;
+  color: #00ffcc;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+.tech-stack h2:hover{
+
+}
+
+.tech-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tech-icons {
+  display: inline-flex;
+  animation: scrollIcons 10s linear infinite;
+}
+.tech-marquee:hover .tech-icons{
+  animation-play-state: paused;
+}
+
+.tech-icons img {
+  height: 60px;
+  width: 60px;
+  margin: 0 25px;
+  filter: drop-shadow(0 0 6px #00ffe0);
+  transition: all 0.4s ease;
+  border-radius: 15px;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2);
+  filter:drop-shadow(0 0 20px #00fff2);
+  brightness(1);
+  box-shadow: 0 0 20px #00fff2, 0 0 40px #00aaff, 0 0 60px #00ffee;
+  border: 2px solid transparent;
+  background: linear-gradient(145deg, #00fff2, #00aaff, #ff00ff);
+  background-clip: padding-box;
+}
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #00fff2, 0 0 20px #00aaff;
+  }
+  50% {
+    box-shadow: 0 0 30px #00fff2, 0 0 60px #ff00ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #00fff2, 0 0 20px yellow;
+  }
+}
+
+.tech-icons img:hover {
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes scrollIcons {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 /* HERO CARD 3D neon */
 .hero-card{width:420px;height:280px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 .hero-card img{width:100%;height:100%;object-fit:cover;border-radius:12px;transform:rotateY(8deg);box-shadow:0 30px 80px rgba(0,188,212,0.08)}

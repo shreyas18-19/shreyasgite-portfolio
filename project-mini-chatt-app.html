@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website — Project Details | Shreyas Gite</title>
+  <title>Mini-Chatt-App — Project Details | Shreyas Gite</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background: linear-gradient(160deg, #0f172a, #000);
+      background: radial-gradient(circle at top, #0f172a, #000);
       color: #f5f5f5;
       font-family: 'Outfit', sans-serif;
       line-height: 1.6;
@@ -36,12 +36,23 @@
       box-shadow: 0 0 30px rgba(0,188,212,0.1);
     }
     .section {
-      margin-bottom: 5x;
+      margin-bottom: 5px;
     }
     .section h2 {
       color: #00bcd4;
       margin-bottom: 20px;
       text-shadow: 0 0 10px rgba(0,188,212,0.5);
+    }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .tech-item {
+      background: rgba(0,188,212,0.15);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 0.95rem;
     }
     .images {
       display: grid;
@@ -57,24 +68,24 @@
 </head>
 <body>
   <div class="project-header">
-    <h1>Portfolio Website</h1>
-    <p>A personal responsive portfolio website built to showcase professional achievements, projects, and contact information in a modern design.</p>
+    <h1>Mini-Chatt-App — Real-time Collaboration App</h1>
+    <p>A powerful real-time web application that allows instant collaboration and live data synchronization between multiple users.</p>
   </div>
 
   <div class="project-content">
     <div class="section">
       <h2>Overview</h2>
-      <p>This project represents my online presence and brand identity as a web developer. It highlights my skills, education, and achievements using clean UI and modern UX principles.</p>
+      <p>Mini-Chatt-App is designed as a live collaborative tool that connects users in real-time. It’s built using HTML, CSS and JavaScript to provide seamless communication without page reloads.</p>
     </div>
 
     <div class="section">
       <h2>Key Features</h2>
       <ul>
-        <li>🎨 Fully responsive design</li>
-        <li>🧭 Smooth navigation and animations</li>
-        <li>💬 WhatsApp-integrated contact form</li>
-        <li>📂 Project showcase with live demo links</li>
-        <li>⚡ Optimized performance</li>
+        <li>⚡ Instant real-time data sync</li>
+        <li>💬 Live messaging system</li>
+        <li>📊 User online status tracking</li>
+        <li>📱 Fully responsive design</li>
+        <li>🔒 Secure data with MongoDB</li>
       </ul>
     </div>
 
@@ -84,20 +95,22 @@
         <div class="tech-item">HTML5</div>
         <div class="tech-item">CSS3</div>
         <div class="tech-item">JavaScript (ES6)</div>
+        <div class="tech-item">Node.js</div>
+        
       </div>
     </div>
 
     <div class="section">
       <h2>Screenshots</h2>
       <div class="images">
-        <img src="scre 1.png" alt="Portfolio Preview 1">
-        <img src="scre2.png" alt="Portfolio Preview 2">
+        <img src="app_screenshot.png" alt="Screenshot 1">
+        <img src="ss2.png" alt="Screenshot 2">
       </div>
     </div>
 
     <div class="section">
       <h2>Learning & Takeaways</h2>
-      <p>Through this project, I mastered responsive layouts, modern UI design, and professional presentation. It also helped me improve my JavaScript interaction skills and layout optimization.</p>
+      <p>This project strengthened my understanding of real-time web technologies and backend socket connections. It taught me about event-driven architecture, user synchronization, and scalable server deployment.</p>
     </div>
   </div>
 </body>

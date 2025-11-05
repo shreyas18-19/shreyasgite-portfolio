@@ -12,6 +12,8 @@ document.querySelectorAll('.nav-link, .btn-ghost, .btn-cta, .btn-detail, a[href^
   });
 });
 
+
+
 // When project "View Details" buttons clicked (they have data-target) also smooth scroll
 document.querySelectorAll('.btn-detail').forEach(btn => {
   btn.addEventListener('click', (e) => {
@@ -74,3 +76,7 @@ AOS.init({
   once: true,     // Animate only once per section
   offset: 120,    // How early animation should trigger
 });
+function openProjectsPage() {
+  window.location.href = "projects.html"; // नवीन पेजकडे नेईल
+}
+

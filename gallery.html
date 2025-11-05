@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Shreyas Gite</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top left, #111, #000);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #00ffe0;
+      text-shadow: 0 0 20px #00ffe0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+
+    }
+
+    .back-btn {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      background: linear-gradient(45deg, #00f5ff, #ff00e6);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #00f5ff;
+    }
+    /* Floating animation for gallery images */
+.gallery img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+    /* Smooth page entry */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      animation: fadeIn 1.2s ease;
+    }
+
+
+/* On hover - zoom + glow + stop floating */
+.gallery img:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  animation-play-state: paused;
+}
+
+/* Floating keyframes */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+    /* Simple fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .gallery img {
+      animation: fadeIn 0.8s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  <header>📸 My Photography Gallery</header>
+
+  <div class="gallery">
+    <img src="pic1.jpeg" alt="Photo 1">
+    <img src="pic2.jpeg" alt="Photo 2">
+    <img src="pic3.jpeg" alt="Photo 3">
+    <img src="pic4.jpeg" alt="Photo 4">
+    <img src="pic5.jpeg" alt="Photo 5">
+    <img src="pic6.jpeg" alt="Photo 6">
+    <img src="pic8.jpeg" alt="Photo 7">
+    <img src="pic7.jpeg" alt="Photo 8">
+  </div>
+
+  <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+  <script>
+    // Optional: Zoom effect when image clicked
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        window.open(img.src, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
